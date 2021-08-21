@@ -12,19 +12,18 @@
 #include "constants/berry.h"
 
 // free saveblock 1 defines
-#define FREE_EXTRA_SEEN_FLAGS           //free up extra pokedex seen flags. Frees up 104 bytes
-#define FREE_FIELD_3598                 //frees up unused saveblock data. 384 bytes
-#define FREE_TRAINER_HILL               //frees up trainer hill data. 28 bytes 
+//#define FREE_EXTRA_SEEN_FLAGS           //free up extra pokedex seen flags. Frees up 104 bytes
+//#define FREE_TRAINER_HILL               //frees up trainer hill data. 28 bytes 
 #define FREE_MYSTERY_EVENT_BUFFERS      //frees up mystery event and ramScript. roughly 1880 bytes
-#define FREE_MATCH_CALL                 //frees up match call data. 104 bytes
+//#define FREE_MATCH_CALL                 //frees up match call data. 104 bytes
 #define FREE_UNION_ROOM_CHAT            //frees up field unk3C88. 210 bytes
 #define FREE_ENIGMA_BERRY               //frees up enigma berry. 52 bytes
-#define FREE_LINK_BATTLE_RECORDS        //frees link battle record data. 88 bytes
+//#define FREE_LINK_BATTLE_RECORDS        //frees link battle record data. 88 bytes
                                         // saveblock1 total: 1846 bytes
 //free saveblock 2 defines
-#define FREE_BATTLE_TOWER_E_READER      //frees up battle tower e reader trainer data. 188 bytes
+//#define FREE_BATTLE_TOWER_E_READER      //frees up battle tower e reader trainer data. 188 bytes
 #define FREE_POKEMON_JUMP               //frees up pokemon jump data. 16 bytes
-#define FREE_RECORD_MIXING_HALL_RECORDS //frees up hall records for record mixing. 1032 bytes
+//#define FREE_RECORD_MIXING_HALL_RECORDS //frees up hall records for record mixing. 1032 bytes
                                         // saveblock2 total: 1236 bytes
                                         
                                         //grand total: 3082
@@ -519,7 +518,6 @@ struct SaveBlock2
     #endif
     /*0x624*/ u16 contestLinkResults[CONTEST_CATEGORIES_COUNT][CONTESTANT_COUNT];
     /*0x64C*/ struct BattleFrontier frontier;
-    /*0xF2C*/ u8 itemFlags[ITEM_FLAGS_COUNT];
 }; // sizeof=0xF2C
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
@@ -1070,9 +1068,8 @@ struct SaveBlock1
     #ifndef FREE_MYSTERY_EVENT_BUFFERS
     /*0x322C*/ struct MEventBuffers unk_322C;   //876 bytes
     #endif
-    #ifndef FREE_FIELD_3598
-    /*0x3598*/ u8 field_3598[0x180];    //384 bytes
-    #endif
+    /*0x3598*/ u8 itemFlags[ITEM_FLAGS_COUNT];
+    /*0x35C8*/ u8 field_35C8[0x150]; // Taken 0x30 bytes from this field to use for itemFlags above
     #ifndef FREE_TRAINER_HILL
     /*0x3718*/ u32 trainerHillTimes[4]; //16 bytes
     #endif

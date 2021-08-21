@@ -971,9 +971,9 @@ static bool8 GetSetItemObtained(u16 item, u8 caseId)
     switch (caseId)
     {
     case FLAG_GET_OBTAINED:
-        return gSaveBlock2Ptr->itemFlags[index] & mask;
+        return gSaveBlock1Ptr->itemFlags[index] & mask;
     case FLAG_SET_OBTAINED:
-        gSaveBlock2Ptr->itemFlags[index] |= mask;
+        gSaveBlock1Ptr->itemFlags[index] |= mask;
         return TRUE;
     }
     
@@ -1111,15 +1111,15 @@ static void ShowItemIconSprite(u16 item, bool8 firstTime, bool8 flash)
 			y = ITEM_ICON_Y;
         }
 
-		gSprites[iconSpriteId].pos2.x = x;
-		gSprites[iconSpriteId].pos2.y = y;
+		gSprites[iconSpriteId].x2 = x;
+		gSprites[iconSpriteId].y2 = y;
 		gSprites[iconSpriteId].oam.priority = 0;
 	}
     
     if (spriteId2 != MAX_SPRITES)
     {
-        gSprites[spriteId2].pos2.x = x;
-        gSprites[spriteId2].pos2.y = y;
+        gSprites[spriteId2].x2 = x;
+        gSprites[spriteId2].y2 = y;
         gSprites[spriteId2].oam.priority = 0;
         gSprites[spriteId2].oam.objMode = ST_OAM_OBJ_WINDOW;
         sItemIconSpriteId2 = spriteId2;
