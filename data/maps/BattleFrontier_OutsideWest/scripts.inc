@@ -6,6 +6,7 @@
 .set LOCALID_CAMPER, 14
 .set LOCALID_FISHERMAN_2, 18
 .set LOCALID_MAN_4, 23
+.set LOCALID_BIRCH, 25
 
 BattleFrontier_OutsideWest_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, BattleFrontier_OutsideWest_OnTransition
@@ -318,6 +319,45 @@ BattleFrontier_OutsideWest_EventScript_Man4::
 BattleFrontier_OutsideWest_EventScript_PokefanF::
 	msgbox BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier, MSGBOX_NPC
 	end
+
+BattleFrontier_OutsideWest_EventScript_Birch::
+	lock
+	faceplayer
+	msgbox BattleFrontier_OutsideWest_Text_Birch, MSGBOX_DEFAULT
+	closemessage
+	
+	fadescreen FADE_TO_BLACK
+	
+	additem ITEM_EON_TICKET
+	setflag FLAG_ENABLE_SHIP_SOUTHERN_ISLAND
+	setvar VAR_DISTRIBUTE_EON_TICKET, 0
+
+	additem ITEM_MYSTIC_TICKET
+	setflag FLAG_ENABLE_SHIP_NAVEL_ROCK
+	setflag FLAG_RECEIVED_MYSTIC_TICKET
+
+	additem ITEM_AURORA_TICKET
+	setflag FLAG_ENABLE_SHIP_BIRTH_ISLAND
+	setflag FLAG_RECEIVED_AURORA_TICKET
+
+	additem ITEM_OLD_SEA_MAP
+	setflag FLAG_ENABLE_SHIP_FARAWAY_ISLAND
+	setflag FLAG_RECEIVED_OLD_SEA_MAP
+
+	removeobject LOCALID_BIRCH
+
+	setflag FLAG_UNUSED_0x8F0
+	
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+
+BattleFrontier_OutsideWest_Text_Birch:
+	.string "Hello again {PLAYER}, how are you?\n"
+	.string "I have some {COLOR GREEN}Tickets{COLOR DARK_GRAY}\l"
+	.string "and an {COLOR BLUE}Old Map{COLOR DARK_GRAY}.\p"
+	.string "New exciting places wait\n"
+	.string "good luck {PLAYER}!$"
 
 BattleFrontier_OutsideWest_Text_BattleDomeSign:
 	.string "This is the BATTLE DOME!\n"
