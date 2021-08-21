@@ -96,6 +96,7 @@ extern const u8 Roulette_Text_NoCoinsLeft[];
 extern const u8 Roulette_Text_PlayMinimumWagerIsX[];
 extern const u8 Roulette_Text_SpecialRateTable[];
 extern const u8 Roulette_Text_NotEnoughCoins[];
+extern const u8 gText_AshQty[];
 
 extern const u8 gText_Slots[];
 extern const u8 gText_Roulette[];
