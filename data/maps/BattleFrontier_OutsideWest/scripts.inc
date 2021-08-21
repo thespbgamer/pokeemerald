@@ -354,10 +354,9 @@ BattleFrontier_OutsideWest_EventScript_Birch::
 
 BattleFrontier_OutsideWest_Text_Birch:
 	.string "Hello again {PLAYER}, how are you?\n"
-	.string "I have some {COLOR GREEN}Tickets{COLOR DARK_GRAY}\l"
-	.string "and an {COLOR BLUE}Old Map{COLOR DARK_GRAY}.\p"
-	.string "New exciting places wait\n"
-	.string "good luck {PLAYER}!$"
+	.string "I have some {COLOR GREEN}Tickets{COLOR DARK_GRAY} and an {COLOR BLUE}Old Map{COLOR DARK_GRAY}.\p"
+	.string "New exciting places wait and POKéMON,\n"
+	.string "be careful and good luck {PLAYER}!$"
 
 BattleFrontier_OutsideWest_Text_BattleDomeSign:
 	.string "This is the BATTLE DOME!\n"
