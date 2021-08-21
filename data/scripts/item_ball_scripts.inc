@@ -657,3 +657,47 @@ MagmaHideout_4F_EventScript_ItemMaxRevive::
 MagmaHideout_3F_3R_EventScript_ItemEscapeRope::
 	finditem ITEM_ESCAPE_ROPE
 	end
+
+ShoalCave_LowTideIceRoom_EventScript_ItemTM14::
+	finditem ITEM_TM14
+	end
+
+PetalburgCity_EventScript_ItemTM15::
+	finditem ITEM_TM15
+	end
+
+RustboroCity_EventScript_ItemTM16::
+	finditem ITEM_TM16
+	end
+
+RustboroCity_EventScript_ItemTM17::
+	finditem ITEM_TM17
+	end
+
+DewfordTown_EventScript_ItemTM20::
+	finditem ITEM_TM20
+	end
+
+GraniteCave_B2F_EventScript_ItemTM21::
+	finditem ITEM_TM21
+	end
+
+NewMauville_Inside_EventScript_ItemTM25::
+	finditem ITEM_TM25
+	end
+
+MossdeepCity_EventScript_ItemTM32::
+	finditem ITEM_TM32
+	end
+
+MauvilleCity_EventScript_ItemTM33::
+	finditem ITEM_TM33
+	end
+
+MtChimney_EventScript_ItemTM35::
+	finditem ITEM_TM35
+	end
+
+MtChimney_EventScript_ItemTM38::
+	finditem ITEM_TM38
+	end
