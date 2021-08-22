@@ -686,10 +686,6 @@ NewMauville_Inside_EventScript_ItemTM25::
 	finditem ITEM_TM25
 	end
 
-MossdeepCity_EventScript_ItemTM32::
-	finditem ITEM_TM32
-	end
-
 MauvilleCity_EventScript_ItemTM33::
 	finditem ITEM_TM33
 	end
@@ -700,4 +696,8 @@ MtChimney_EventScript_ItemTM35::
 
 MtChimney_EventScript_ItemTM38::
 	finditem ITEM_TM38
+	end
+
+VerdanturfTown_EventScript_ITEM_063::
+	finditem ITEM_063
 	end
