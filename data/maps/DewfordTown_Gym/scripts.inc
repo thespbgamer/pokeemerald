@@ -169,6 +169,7 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 
 DewfordTown_Gym_EventScript_GiveBulkUp::
 	giveitem ITEM_TM08
+	giveitem 252
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_BagIsFull
 	msgbox DewfordTown_Gym_Text_ExplainBulkUp, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM08
@@ -176,6 +177,7 @@ DewfordTown_Gym_EventScript_GiveBulkUp::
 
 DewfordTown_Gym_EventScript_GiveBulkUp2:
 	giveitem ITEM_TM08
+	giveitem 252
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
 	msgbox DewfordTown_Gym_Text_ExplainBulkUp, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM08
