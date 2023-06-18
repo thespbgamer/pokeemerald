@@ -644,6 +644,7 @@ const u8 gText_MrBriney[] = _("MR. BRINEY"); // Unused
 const u8 gText_Challenge[] = _("CHALLENGE");
 const u8 gText_Info3[] = _("INFO");
 const u8 gText_Lv50[] = _("LV. 50");
+const u8 gText_AshQty[] = _("ASH QTY:\n{STR_VAR_1}{PAUSE_UNTIL_PRESS}");
 const u8 gText_OpenLevel[] = _("OPEN LEVEL");
 const u8 gText_FreshWaterAndPrice[] = _("FRESH WATER{CLEAR_TO 0x48}¥200");
 const u8 gText_SodaPopAndPrice[] = _("SODA POP{CLEAR_TO 0x48}¥300");

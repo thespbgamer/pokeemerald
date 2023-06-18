@@ -39,5 +39,7 @@ void ItemUseOutOfBattle_Hammer(u8);
 void ItemUseOutOfBattle_DivingSuit(u8);
 void ItemUseOutOfBattle_Lantern(u8);
 void ItemUseOutOfBattle_PowerGlove(u8);
+void ItemUseOutOfBattle_SootSack(u8);
+u16 GetAshCount(void);
 
 #endif // GUARD_ITEM_USE_H
