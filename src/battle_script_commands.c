@@ -9620,6 +9620,7 @@ static void Cmd_pickup(void)
                 && (Random() % 10) == 0)
             {
                 heldItem = GetBattlePyramidPickupItemId();
+                PrepareStringBattle(STRINGID_PICKUPMESSAGE, gBattlerAttacker);
                 SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &heldItem);
             }
         }
@@ -9652,11 +9653,13 @@ static void Cmd_pickup(void)
                 {
                     if (sPickupProbabilities[j] > rand)
                     {
+                        PrepareStringBattle(STRINGID_PICKUPMESSAGE, gBattlerAttacker);
                         SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &sPickupItems[lvlDivBy10 + j]);
                         break;
                     }
                     else if (rand == 99 || rand == 98)
                     {
+                        PrepareStringBattle(STRINGID_PICKUPMESSAGE, gBattlerAttacker);
                         SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &sRarePickupItems[lvlDivBy10 + (99 - rand)]);
                         break;
                     }
