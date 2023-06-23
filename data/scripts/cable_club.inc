@@ -1,6 +1,12 @@
 CableClub_OnTransition:
+	specialvar VAR_RESULT, IsWirelessAdapterConnected
+	goto_if_eq VAR_RESULT, FALSE, CableClub_OnResume_DisableUnionRoomNurseText
 	call CableClub_EventScript_HideOrShowMysteryGiftMan
 	end
+
+CableClub_OnResume_DisableUnionRoomNurseText:
+       setflag FLAG_NURSE_UNION_ROOM_REMINDER
+       end
 
 CableClub_EventScript_HideOrShowMysteryGiftMan::
 	specialvar VAR_RESULT, ShouldDistributeEonTicket
