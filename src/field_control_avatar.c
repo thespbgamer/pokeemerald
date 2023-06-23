@@ -195,7 +195,7 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
         return TRUE;
     
-    if (input->pressedRButton && TryStartDexnavSearch())
+    if (input->pressedRButton && MapHasNoEncounterData() == FALSE && TryStartDexnavSearch())
         return TRUE;
 
     return FALSE;
