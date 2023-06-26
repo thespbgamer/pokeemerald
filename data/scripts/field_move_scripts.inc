@@ -2,7 +2,7 @@
 EventScript_CutTree::
 	lockall
 	checkitem ITEM_AXE, 1
-	compare VAR_RESULT, 0
+	goto_if_eq VAR_RESULT, FALSE, EventScript_CheckTreeCantCut
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CheckTreeCantCut
 	msgbox Text_PlayerUsedAxe, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_CUT_ON_TREE
@@ -50,7 +50,7 @@ Text_CantCut:
 EventScript_RockSmash::
 	lockall
 	checkitem ITEM_HAMMER, 1
-	compare VAR_RESULT, 0
+	goto_if_eq VAR_RESULT, FALSE, EventScript_CantSmashRock
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock
 	msgbox Text_PlayerUsedHammer, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_ROCK_SMASH
@@ -107,7 +107,7 @@ EventScript_StrengthBoulder::
 	lockall
 	goto_if_set FLAG_SYS_USE_STRENGTH, EventScript_CheckActivatedBoulder
 	checkitem ITEM_POWER_GLOVE, 1
-	goto_if_eq VAR_RESULT, 0, EventScript_CantStrength
+	goto_if_eq VAR_RESULT, FALSE, EventScript_CantStrength
 	msgbox Text_PlayerUsedGlove, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_STRENGTH
 	waitstate
@@ -176,7 +176,7 @@ Text_PlayerUsedWaterfall:
 EventScript_DiveSpot::
 	lockall
 	checkitem ITEM_DIVING_SUIT, 1
-	goto_if_eq VAR_RESULT, 0, EventScript_CantDive
+	goto_if_eq VAR_RESULT, FALSE, EventScript_CantDive
 	msgbox Text_PlayerUsedDive, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndDive
@@ -200,7 +200,7 @@ EventScript_EndDive::
 EventScript_UseDiveUnderwater::
 	lockall
 	checkitem ITEM_DIVING_SUIT, 1
-	goto_if_eq VAR_RESULT, 0, EventScript_CantSurface
+	goto_if_eq VAR_RESULT, FALSE, EventScript_CantSurface
 	msgbox Text_Surfaced, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndSurface
