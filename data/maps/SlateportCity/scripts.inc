@@ -559,15 +559,20 @@ SlateportCity_EventScript_PowerTMClerk::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemart SlateportCity_Pokemart_PowerTMs
+	pokemart SlateportCity_Pokemart_EvolutionStones
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-SlateportCity_Pokemart_PowerTMs:
-	.2byte ITEM_TM10  @ Hidden Power
-	.2byte ITEM_TM43  @ Secret Power
+SlateportCity_Pokemart_EvolutionStones:
+	.2byte ITEM_TRADE_STONE  @ Trade Stone
+	.2byte ITEM_SUN_STONE  @ Sun stone
+	.2byte ITEM_MOON_STONE  @ Moon Stone
+	.2byte ITEM_WATER_STONE  @ Water Stone
+	.2byte ITEM_FIRE_STONE  @ Fire Stone
+	.2byte ITEM_THUNDER_STONE  @ Thunder Stone
+	.2byte ITEM_LEAF_STONE  @ Leaf Stone
 	.2byte ITEM_NONE
 	release
 	end

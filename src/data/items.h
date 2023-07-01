@@ -1174,7 +1174,7 @@ const struct Item gItems[] =
     {
         .name = _("MOON STONE"),
         .itemId = ITEM_MOON_STONE,
-        .price = 0,
+        .price = 2100,
         .description = sMoonStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1370,15 +1370,15 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_070] =
+    [ITEM_TRADE_STONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("TRADE STONE"),
+        .itemId = ITEM_TRADE_STONE,
+        .price = 2500,
+        .description = sTradeStoneDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
     [ITEM_071] =

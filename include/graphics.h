@@ -3094,6 +3094,9 @@ extern const u32 gPokeblock_Gfx[];
 extern const u32 gItemIcon_QuestionMark[];
 extern const u32 gItemIconPalette_QuestionMark[];
 
+extern const u32 gItemIcon_TradeStone[];
+extern const u32 gItemIconPalette_TradeStone[];
+
 // Decorations
 extern const u32 gDecorIcon_HeavyDesk[];
 extern const u32 gDecorIconPalette_HeavyDesk[];
