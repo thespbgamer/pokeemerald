@@ -3732,7 +3732,7 @@ static void CursorCb_FieldMove(u8 taskId)
     }
     else
     {
-        if (fieldMove == FIELD_MOVE_FLY && FlagGet(FLAG_BADGE02_GET) != TRUE)
+        if (fieldMove == FIELD_MOVE_FLY && FlagGet(FLAG_BADGE06_GET) != TRUE)
         {
             DisplayPartyMenuMessage(gText_CantUseUntilNewBadge, TRUE);
             gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
