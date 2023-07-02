@@ -31,6 +31,7 @@ CableClub_EventScript_MysteryGiftMan::
 	vgoto_if_unset FLAG_RECEIVED_AURORA_TICKET, MysteryGiftScript_AuroraTicket
 	vgoto_if_unset FLAG_RECEIVED_MYSTIC_TICKET, MysteryGiftScript_MysticTicket
 	vgoto_if_unset FLAG_RECEIVED_OLD_SEA_MAP, MysteryGiftScript_OldSeaMap
+	vgoto_if_unset FLAG_ENABLE_SHIP_SOUTHERN_ISLAND, CableClub_EventScript_DistributeEonTicket
 	goto MysteryGiftScript_AlteringCave
 	end
 
@@ -41,9 +42,9 @@ CableClub_EventScript_MysteryGiftThankYou::
 	end
 
 CableClub_EventScript_DistributeEonTicket::
-	checkitem ITEM_EON_TICKET
-	goto_if_eq VAR_RESULT, TRUE, CableClub_EventScript_TryWonderCardScript
-	goto_if_set FLAG_ENABLE_SHIP_SOUTHERN_ISLAND, CableClub_EventScript_TryWonderCardScript
+	@ checkitem ITEM_EON_TICKET
+	@ goto_if_eq VAR_RESULT, TRUE, CableClub_EventScript_TryWonderCardScript
+	@ goto_if_set FLAG_ENABLE_SHIP_SOUTHERN_ISLAND, CableClub_EventScript_TryWonderCardScript
 	msgbox MysteryGift_Text_TheresATicketForYou, MSGBOX_DEFAULT
 	giveitem ITEM_EON_TICKET
 	setflag FLAG_ENABLE_SHIP_SOUTHERN_ISLAND
