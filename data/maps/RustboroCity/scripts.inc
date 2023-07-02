@@ -91,7 +91,7 @@ RustboroCity_EventScript_MatchCallTutorial::
 	case 4, RustboroCity_EventScript_PleaseSelectPokenav
 	case 5, RustboroCity_EventScript_PleaseSelectPokenav
 	case 6, RustboroCity_EventScript_PleaseSelectPokenav
-	case 7, RustboroCity_EventScript_PleaseSelectPokenav
+	@ case 7, RustboroCity_EventScript_PleaseSelectPokenav
 	case MULTI_B_PRESSED, RustboroCity_EventScript_PleaseSelectPokenav
 	special OpenPokenavForTutorial
 	waitstate
