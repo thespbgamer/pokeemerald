@@ -29,7 +29,7 @@ MysticTicket_NoBagSpace:
 	end
 
 MysticTicket_Obtained:
-	vmessage sText_MysticTicketThankYou
+	@ vmessage sText_MysticTicketThankYou
 	waitmessage
 	waitbuttonpress
 	release

@@ -657,7 +657,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE109_TM20                      0x267 // Unused Flag
 #define FLAG_HIDDEN_ITEM_NEW_MAUVILLE_INSIDE_TM25           0x268 // Unused Flag
 #define FLAG_HIDDEN_ITEM_TM21                               0x269 // Unused Flag
-#define FLAG_HIDDEN_ITEM_TM32                               0x26A // Unused Flag
+#define FLAG_UNUSED_0x26A                                   0x26A // Unused Flag
 #define FLAG_HIDDEN_ITEM_TM33                               0x26B // Unused Flag
 #define FLAG_HIDDEN_ITEM_TM35                               0x26C // Unused Flag
 #define FLAG_HIDDEN_ITEM_TM38                               0x26D // Unused Flag

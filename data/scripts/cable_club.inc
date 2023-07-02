@@ -25,9 +25,13 @@ CableClub_EventScript_HideMysteryGiftMan::
 	return
 
 CableClub_EventScript_MysteryGiftMan::
-	specialvar VAR_RESULT, ShouldDistributeEonTicket
-	goto_if_eq VAR_RESULT, TRUE, CableClub_EventScript_DistributeEonTicket
-	goto CableClub_EventScript_TryWonderCardScript
+	@ specialvar VAR_RESULT, ShouldDistributeEonTicket
+	@ goto_if_eq VAR_RESULT, TRUE, CableClub_EventScript_DistributeEonTicket
+
+	vgoto_if_unset FLAG_RECEIVED_AURORA_TICKET, MysteryGiftScript_AuroraTicket
+	vgoto_if_unset FLAG_RECEIVED_MYSTIC_TICKET, MysteryGiftScript_MysticTicket
+	vgoto_if_unset FLAG_RECEIVED_OLD_SEA_MAP, MysteryGiftScript_OldSeaMap
+	goto MysteryGiftScript_AlteringCave
 	end
 
 CableClub_EventScript_TryWonderCardScript::

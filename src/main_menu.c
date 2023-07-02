@@ -641,8 +641,8 @@ static void Task_MainMenuCheckSaveFile(u8 taskId)
         {
             case SAVE_STATUS_OK:
                 tMenuType = HAS_SAVED_GAME;
-                if (IsMysteryGiftEnabled())
-                    tMenuType++;
+                // if (IsMysteryGiftEnabled())
+                    tMenuType += 2;
                 gTasks[taskId].func = Task_MainMenuCheckBattery;
                 break;
             case SAVE_STATUS_CORRUPT:
@@ -654,8 +654,8 @@ static void Task_MainMenuCheckSaveFile(u8 taskId)
                 CreateMainMenuErrorWindow(gText_SaveFileCorrupted);
                 gTasks[taskId].func = Task_WaitForSaveFileErrorWindow;
                 tMenuType = HAS_SAVED_GAME;
-                if (IsMysteryGiftEnabled() == TRUE)
-                    tMenuType++;
+                // if (IsMysteryGiftEnabled() == TRUE)
+                    tMenuType += 2;
                 break;
             case SAVE_STATUS_EMPTY:
             default:

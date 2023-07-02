@@ -28,7 +28,7 @@ AuroraTicket_NoBagSpace:
 	end
 
 AuroraTicket_Obtained:
-	vmessage sText_AuroraTicketThankYou
+	@ vmessage sText_AuroraTicketThankYou
 	waitmessage
 	waitbuttonpress
 	release

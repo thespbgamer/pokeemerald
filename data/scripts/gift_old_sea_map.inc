@@ -28,7 +28,7 @@ OldSeaMap_NoBagSpace:
 	end
 
 OldSeaMap_Obtained:
-	vmessage sText_MysteryGiftOldSeaMapThankYou
+	@ vmessage sText_MysteryGiftOldSeaMapThankYou
 	waitmessage
 	waitbuttonpress
 	release
