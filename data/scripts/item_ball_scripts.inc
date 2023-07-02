@@ -558,6 +558,10 @@ ShoalCave_LowTideIceRoom_EventScript_ItemTM07::
 	finditem ITEM_TM07
 	end
 
+ShoalCave_LowTideIceRoom_EventScript_ItemTM14::
+	finditem ITEM_TM14
+	end
+
 ShoalCave_LowTideIceRoom_EventScript_ItemNeverMeltIce::
 	finditem ITEM_NEVER_MELT_ICE
 	end

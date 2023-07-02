@@ -412,7 +412,9 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",
@@ -517,6 +519,14 @@
       "elevation": 0,
       "item": "ITEM_POKE_BALL",
       "flag": "FLAG_HIDDEN_ITEM_LILYCOVE_CITY_POKE_BALL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 19,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_TM15",
+      "flag": "FLAG_HIDDEN_ITEM_LILYCOVE_CITY_TM15"
     }
   ]
 }

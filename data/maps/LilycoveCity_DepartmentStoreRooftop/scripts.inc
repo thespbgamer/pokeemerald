@@ -5,7 +5,8 @@ LilycoveCity_DepartmentStoreRooftop_MapScripts::
 LilycoveCity_DepartmentStoreRooftop_OnTransition:
 	getpokenewsactive POKENEWS_LILYCOVE
 	call_if_eq VAR_RESULT, TRUE, LilycoveCity_DepartmentStoreRooftop_EventScript_ShowSaleWoman
-	call_if_eq VAR_RESULT, FALSE, LilycoveCity_DepartmentStoreRooftop_EventScript_HideSaleWoman
+	call_if_eq VAR_RESULT, FALSE, LilycoveCity_DepartmentStoreRooftop_EventScript_ShowSaleWoman
+	@ call_if_eq VAR_RESULT, FALSE, LilycoveCity_DepartmentStoreRooftop_EventScript_HideSaleWoman
 	end
 
 LilycoveCity_DepartmentStoreRooftop_EventScript_ShowSaleWoman::

@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
@@ -296,6 +296,14 @@
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PetalburgWoods_EventScript_Sign2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 45,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_TM21",
+      "flag": "FLAG_HIDDEN_ITEM_TM21"
     }
   ]
 }

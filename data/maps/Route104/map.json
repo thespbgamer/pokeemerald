@@ -622,6 +622,14 @@
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_104_HEART_SCALE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 28,
+      "y": 16,
+      "elevation": 0,
+      "item": "ITEM_TM32",
+      "flag": "FLAG_HIDDEN_ITEM_TM32"
     }
   ]
 }

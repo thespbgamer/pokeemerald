@@ -651,16 +651,16 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
-#define FLAG_UNUSED_0x264  0x264 // Unused Flag
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
-#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
-#define FLAG_UNUSED_0x26B  0x26B // Unused Flag
-#define FLAG_UNUSED_0x26C  0x26C // Unused Flag
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
+#define FLAG_HIDDEN_ITEM_LILYCOVE_CITY_TM15                 0x264 // Unused Flag
+#define FLAG_HIDDEN_ITEM_RUSTBORO_CITY_TM16                 0x265 // Unused Flag
+#define FLAG_HIDDEN_ITEM_ROUTE107_TM17                      0x266 // Unused Flag
+#define FLAG_HIDDEN_ITEM_ROUTE109_TM20                      0x267 // Unused Flag
+#define FLAG_HIDDEN_ITEM_NEW_MAUVILLE_INSIDE_TM25           0x268 // Unused Flag
+#define FLAG_HIDDEN_ITEM_TM21                               0x269 // Unused Flag
+#define FLAG_HIDDEN_ITEM_TM32                               0x26A // Unused Flag
+#define FLAG_HIDDEN_ITEM_TM33                               0x26B // Unused Flag
+#define FLAG_HIDDEN_ITEM_TM35                               0x26C // Unused Flag
+#define FLAG_HIDDEN_ITEM_TM38                               0x26D // Unused Flag
 #define FLAG_UNUSED_0x26E  0x26E // Unused Flag
 #define FLAG_UNUSED_0x26F  0x26F // Unused Flag
 #define FLAG_UNUSED_0x270  0x270 // Unused Flag
@@ -1217,7 +1217,7 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
+#define FLAG_ITEM_SHOAL_CAVE_ICE_ROOM_TM14                          0x493 // Unused Flag
 #define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
 #define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
 #define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
