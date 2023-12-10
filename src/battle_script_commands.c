@@ -1642,6 +1642,66 @@ u8 AI_TypeCalc(u16 move, u16 targetSpecies, u8 targetAbility)
     return flags;
 }
 
+u8 TypeCalcWithHiddenPower(u16 move, u16 targetSpecies, u8 targetAbility)
+{
+    s32 i = 0;
+    u8 flags = 0;
+    u8 type1 = gSpeciesInfo[targetSpecies].types[0], type2 = gSpeciesInfo[targetSpecies].types[1];
+    u8 moveType;
+
+    if (move == MOVE_STRUGGLE)
+        return 0;
+
+    moveType = gBattleMoves[move].type;
+
+    if (move == MOVE_HIDDEN_POWER)
+    {
+        u8 typeBits  = ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_HP_IV) & 1) << 0)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_ATK_IV) & 1) << 1)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_DEF_IV) & 1) << 2)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_SPEED_IV) & 1) << 3)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_SPATK_IV) & 1) << 4)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_SPDEF_IV) & 1) << 5);
+
+        u8 type = (15 * typeBits) / 63 + 1;
+        if (type >= TYPE_MYSTERY)
+            type++;
+        type |= 0xC0;
+        moveType = type & 0x3F;
+    }
+
+    if (targetAbility == ABILITY_LEVITATE && moveType == TYPE_GROUND)
+    {
+        flags = MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE;
+    }
+    else
+    {
+        while (TYPE_EFFECT_ATK_TYPE(i) != TYPE_ENDTABLE)
+        {
+            if (TYPE_EFFECT_ATK_TYPE(i) == TYPE_FORESIGHT)
+            {
+                i += 3;
+                continue;
+            }
+            if (TYPE_EFFECT_ATK_TYPE(i) == moveType)
+            {
+                // check type1
+                if (TYPE_EFFECT_DEF_TYPE(i) == type1)
+                    ModulateDmgByType2(TYPE_EFFECT_MULTIPLIER(i), move, &flags);
+                // check type2
+                if (TYPE_EFFECT_DEF_TYPE(i) == type2 && type1 != type2)
+                    ModulateDmgByType2(TYPE_EFFECT_MULTIPLIER(i), move, &flags);
+            }
+            i += 3;
+        }
+    }
+    if (targetAbility == ABILITY_WONDER_GUARD
+     && (!(flags & MOVE_RESULT_SUPER_EFFECTIVE) || ((flags & (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)) == (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)))
+     && gBattleMoves[move].power)
+        flags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
+    return flags;
+}
+
 // Multiplies the damage by a random factor between 85% to 100% inclusive
 static inline void ApplyRandomDmgMultiplier(void)
 {
