@@ -3719,6 +3719,21 @@ extern const u32 gItemIcon_ThickClub[];
 extern const u32 gItemIconPalette_ThickClub[];
 extern const u32 gItemIcon_Stick[];
 extern const u32 gItemIconPalette_Stick[];
+
+//New key items for HMs
+extern const u32 gItemIcon_Axe[];
+extern const u32 gItemIconPalette_Axe[];
+extern const u32 gItemIcon_Lantern[];
+extern const u32 gItemIconPalette_Lantern[];
+extern const u32 gItemIcon_Pickaxe[];
+extern const u32 gItemIconPalette_Pickaxe[];
+extern const u32 gItemIcon_PowerGlove[];
+extern const u32 gItemIconPalette_PowerGlove[];
+extern const u32 gItemIcon_ScubaGear[];
+extern const u32 gItemIconPalette_ScubaGear[];
+extern const u32 gItemIcon_Surfboard[];
+extern const u32 gItemIconPalette_Surfboard[];
+
 // Contest hold items
 extern const u32 gItemIcon_Scarf[];
 extern const u32 gItemIconPalette_RedScarf[];

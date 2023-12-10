@@ -966,9 +966,8 @@ static const u8 sAxeDesc[] = _(
     "clearing bushes.");
 
 static const u8 sHammerDesc[] = _(
-	"A small rubber\n"
-    "mallet. It may can\n"
-    "smash rocks.");
+	"A pickaxe. It\n"
+    "can smash rocks.");
 
 static const u8 sDivingSuitDesc[] = _(
 	"Portable suit made\n"

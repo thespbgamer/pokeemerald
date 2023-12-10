@@ -267,12 +267,12 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_0F6] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0F7] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // HM Items
-    [ITEM_SURFBOARD] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-	[ITEM_AXE] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-	[ITEM_HAMMER] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-	[ITEM_DIVING_SUIT] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-	[ITEM_LANTERN] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-	[ITEM_POWER_GLOVE] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_SURFBOARD] = {gItemIcon_Surfboard, gItemIconPalette_Surfboard},
+	[ITEM_AXE] = {gItemIcon_Axe, gItemIconPalette_Axe},
+	[ITEM_HAMMER] = {gItemIcon_Pickaxe, gItemIconPalette_Pickaxe},
+	[ITEM_DIVING_SUIT] = {gItemIcon_ScubaGear, gItemIconPalette_ScubaGear},
+	[ITEM_LANTERN] = {gItemIcon_Lantern, gItemIconPalette_Lantern},
+	[ITEM_POWER_GLOVE] = {gItemIcon_PowerGlove, gItemIconPalette_PowerGlove},
     // Contest hold items
     [ITEM_RED_SCARF] = {gItemIcon_Scarf, gItemIconPalette_RedScarf},
     [ITEM_BLUE_SCARF] = {gItemIcon_Scarf, gItemIconPalette_BlueScarf},

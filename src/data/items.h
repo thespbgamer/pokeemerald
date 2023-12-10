@@ -3044,7 +3044,7 @@ const struct Item gItems[] =
 
 	[ITEM_HAMMER] =
     {
-        .name = _("HAMMER"),
+        .name = _("PICKAXE"),
         .itemId = ITEM_HAMMER,
         .price = 0,
 		.importance = 1,
@@ -3056,7 +3056,7 @@ const struct Item gItems[] =
 
 	[ITEM_DIVING_SUIT] =
     {
-        .name = _("DIVING SUIT"),
+        .name = _("SCUBA GEAR"),
         .itemId = ITEM_DIVING_SUIT,
         .price = 0,
 		.importance = 1,
