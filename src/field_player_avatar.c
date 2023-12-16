@@ -638,6 +638,11 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
             gPlayerAvatar.creeping = TRUE;
             PlayerGoSlow(direction);
         }
+        else if (heldKeys & B_BUTTON)
+        {
+            // speed 2 is fast, same speed as running
+            PlayerWalkFaster(direction);
+        }
         else
         {
             // speed 2 is fast, same speed as running
