@@ -1579,6 +1579,7 @@ static void Task_HandleInput(u8 taskId)
                  // Cycle through IVs/EVs/stats on pressing A
                 ChangeSummaryState(data, taskId);
                 BufferIvOrEvStats(data[3]);
+                PlaySE(SE_SELECT);
             }
             else if (sMonSummaryScreen->currPageIndex != PSS_PAGE_SKILLS)
             {
