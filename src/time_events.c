@@ -44,6 +44,11 @@ bool8 IsMirageIslandPresent(void)
     u16 rnd = GetMirageRnd() >> 16;
     int i;
 
+    if (FlagGet(FLAG_TOGGLE_MIRAGE_ISLAND) == TRUE)
+    {
+        return TRUE;
+    }
+
     for (i = 0; i < PARTY_SIZE; i++)
         if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) && (GetMonData(&gPlayerParty[i], MON_DATA_PERSONALITY) & 0xFFFF) == rnd)
             return TRUE;
@@ -54,32 +59,32 @@ bool8 IsMirageIslandPresent(void)
 void UpdateShoalTideFlag(void)
 {
     static const u8 tide[] =
-    {
-        1, // 00
-        1, // 01
-        1, // 02
-        0, // 03
-        0, // 04
-        0, // 05
-        0, // 06
-        0, // 07
-        0, // 08
-        1, // 09
-        1, // 10
-        1, // 11
-        1, // 12
-        1, // 13
-        1, // 14
-        0, // 15
-        0, // 16
-        0, // 17
-        0, // 18
-        0, // 19
-        0, // 20
-        1, // 21
-        1, // 22
-        1, // 23
-    };
+        {
+            1, // 00
+            1, // 01
+            1, // 02
+            0, // 03
+            0, // 04
+            0, // 05
+            0, // 06
+            0, // 07
+            0, // 08
+            1, // 09
+            1, // 10
+            1, // 11
+            1, // 12
+            1, // 13
+            1, // 14
+            0, // 15
+            0, // 16
+            0, // 17
+            0, // 18
+            0, // 19
+            0, // 20
+            1, // 21
+            1, // 22
+            1, // 23
+        };
 
     if (IsMapTypeOutdoors(GetLastUsedWarpMapType()))
     {

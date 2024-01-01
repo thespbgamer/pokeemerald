@@ -7,11 +7,13 @@ PacifidlogTown_House5_EventScript_MirageIslandWatcher::
 	specialvar VAR_RESULT, IsMirageIslandPresent
 	goto_if_eq VAR_RESULT, TRUE, PacifidlogTown_House5_EventScript_MirageIslandPresent
 	msgbox PacifidlogTown_House5_Text_CantSeeMirageIslandToday, MSGBOX_DEFAULT
+	setflag FLAG_TOGGLE_MIRAGE_ISLAND
 	release
 	end
 
 PacifidlogTown_House5_EventScript_MirageIslandPresent::
 	msgbox PacifidlogTown_House5_Text_CanSeeMirageIslandToday, MSGBOX_DEFAULT
+	clearflag FLAG_TOGGLE_MIRAGE_ISLAND
 	release
 	end
 
@@ -20,11 +22,13 @@ PacifidlogTown_House5_EventScript_Gentleman::
 	end
 
 PacifidlogTown_House5_Text_CantSeeMirageIslandToday:
-	.string "I can't see MIRAGE ISLAND today…$"
+	.string "I can't see MIRAGE ISLAND today…\n"
+	.string "But you will.$"
 
 PacifidlogTown_House5_Text_CanSeeMirageIslandToday:
 	.string "Oh! Oh my!\n"
-	.string "I can see MIRAGE ISLAND today!$"
+	.string "I can see MIRAGE ISLAND today!\l"
+	.string "But you most likely wont.$"
 
 PacifidlogTown_House5_Text_MirageIslandAppearDependingOnWeather:
 	.string "MIRAGE ISLAND…\p"

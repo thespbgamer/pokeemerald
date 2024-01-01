@@ -58,10 +58,9 @@ EWRAM_DATA bool8 gDifferentSaveFile = FALSE;
 EWRAM_DATA bool8 gEnableContestDebugging = FALSE;
 
 static const struct ContestWinner sContestWinnerPicDummy =
-{
-    .monName = _(""),
-    .trainerName = _("")
-};
+    {
+        .monName = _(""),
+        .trainerName = _("")};
 
 void SetTrainerId(u32 trainerId, u8 *dst)
 {
@@ -211,9 +210,10 @@ void NewGameInitData(void)
     ResetContestLinkResults();
     typeEffectPrev ? FlagSet(FLAG_TYPE_EFFECTIVENESS_BATTLE_SHOW) : FlagClear(FLAG_TYPE_EFFECTIVENESS_BATTLE_SHOW);
     FlagClear(FLAG_WATERFALL);
+    FlagClear(FLAG_TOGGLE_MIRAGE_ISLAND);
     memset(gSaveBlock1Ptr->dexNavSearchLevels, 0, sizeof(gSaveBlock1Ptr->dexNavSearchLevels));
     gSaveBlock1Ptr->dexNavChain = 0;
-    
+
     memset(&gSaveBlock2Ptr->itemFlags, 0, sizeof(gSaveBlock2Ptr->itemFlags));
 }
 
