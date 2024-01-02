@@ -938,6 +938,10 @@ gText_ThankYouForAccessingMysteryGift::
 	.string "Thank you for accessing the\n"
 	.string "MYSTERY GIFT System.$"
 
+gText_WaitForAccessingMysteryGift::
+	.string "Can't access the MYSTERY GIFT\n"
+	.string "system yet, try again later.$"
+
 gText_PlayerFoundOneTMHM::
 	.string "{PLAYER} found one {STR_VAR_1}\n"
 	.string "{STR_VAR_2}!$"

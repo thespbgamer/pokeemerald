@@ -25,6 +25,7 @@ CableClub_EventScript_HideMysteryGiftMan::
 	return
 
 CableClub_EventScript_MysteryGiftMan::
+	vgoto_if_unset FLAG_RECEIVED_SS_TICKET, CableClub_EventScript_MysteryGiftWait
 	@ specialvar VAR_RESULT, ShouldDistributeEonTicket
 	@ goto_if_eq VAR_RESULT, TRUE, CableClub_EventScript_DistributeEonTicket
 
@@ -33,6 +34,11 @@ CableClub_EventScript_MysteryGiftMan::
 	vgoto_if_unset FLAG_RECEIVED_MYSTIC_TICKET, MysteryGiftScript_MysticTicket
 	vgoto_if_unset FLAG_RECEIVED_OLD_SEA_MAP, MysteryGiftScript_OldSeaMap
 	goto MysteryGiftScript_AlteringCave
+	end
+
+CableClub_EventScript_MysteryGiftWait::
+	msgbox gText_WaitForAccessingMysteryGift, MSGBOX_DEFAULT
+	release
 	end
 
 CableClub_EventScript_TryWonderCardScript::
