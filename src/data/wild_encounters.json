@@ -1077,7 +1077,7 @@
               {
                 "min_level": 20,
                 "max_level": 30,
-                "species": "SPECIES_SURSKIT"
+                "species": "SPECIES_NATU"
               }
             ]
           }
@@ -1975,6 +1975,26 @@
                 "min_level": 6,
                 "max_level": 6,
                 "species": "SPECIES_SLAKOTH"
+              }
+            ]
+          },
+          "hidden_mons": {
+            "encounter_rate": 0,
+            "mons": [
+              {
+                "min_level": 4,
+                "max_level": 6,
+                "species": "SPECIES_HERACROSS"
+              },
+              {
+                "min_level": 4,
+                "max_level": 5,
+                "species": "SPECIES_PINSIR"
+              },
+              {
+                "min_level": 5,
+                "max_level": 6,
+                "species": "SPECIES_PINSIR"
               }
             ]
           }
@@ -7981,7 +8001,7 @@
               {
                 "min_level": 14,
                 "max_level": 18,
-                "species": "SPECIES_LUNATONE"
+                "species": "SPECIES_BAGON"
               }
             ]
           }
@@ -8155,7 +8175,7 @@
               {
                 "min_level": 33,
                 "max_level": 39,
-                "species": "SPECIES_LUNATONE"
+                "species": "SPECIES_BAGON"
               }
             ]
           }
@@ -8329,7 +8349,7 @@
               {
                 "min_level": 33,
                 "max_level": 39,
-                "species": "SPECIES_LUNATONE"
+                "species": "SPECIES_BAGON"
               }
             ]
           }
