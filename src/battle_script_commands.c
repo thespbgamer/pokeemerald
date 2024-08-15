@@ -9376,7 +9376,7 @@ static void Cmd_pickup(void)
             if (ability == ABILITY_PICKUP && species != SPECIES_NONE && species != SPECIES_EGG && heldItem == ITEM_NONE && (Random() % 10) == 0)
             {
                 heldItem = GetBattlePyramidPickupItemId();
-                PrepareStringBattle(STRINGID_PICKUPMESSAGE, gBattlerAttacker);
+                PrepareStringBattle(STRINGID_PICKUPMESSAGE, gBattlerAttacker);        
                 SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &heldItem);
             }
             else if (species == SPECIES_SHUCKLE && heldItem >= FIRST_BERRY_INDEX && heldItem <= LAST_BERRY_INDEX)
@@ -9401,7 +9401,7 @@ static void Cmd_pickup(void)
             else
                 ability = gSpeciesInfo[species].abilities[0];
 
-            if (ability == ABILITY_PICKUP && species != SPECIES_NONE && species != SPECIES_EGG && heldItem == ITEM_NONE && (Random() % 10) == 0)
+            if (ability == ABILITY_PICKUP && species != SPECIES_NONE && species != SPECIES_EGG && (Random() % 10) == 0)
             {
                 s32 j;
                 s32 rand = Random() % 100;
@@ -9414,13 +9414,16 @@ static void Cmd_pickup(void)
                     if (sPickupProbabilities[j] > rand)
                     {
                         PrepareStringBattle(STRINGID_PICKUPMESSAGE, gBattlerAttacker);
-                        SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &sPickupItems[lvlDivBy10 + j]);
+                        if (AddBagItem(sPickupItems[lvlDivBy10 + j], 1) == FALSE && heldItem == ITEM_NONE)
+                            SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &sPickupItems[lvlDivBy10 + j]);
                         break;
                     }
                     else if (rand == 99 || rand == 98)
                     {
+                        
                         PrepareStringBattle(STRINGID_PICKUPMESSAGE, gBattlerAttacker);
-                        SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &sRarePickupItems[lvlDivBy10 + (99 - rand)]);
+                        if (AddBagItem(sRarePickupItems[lvlDivBy10 + (99 - rand)], 1) == FALSE && heldItem == ITEM_NONE)
+                            SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &sRarePickupItems[lvlDivBy10 + (99 - rand)]);
                         break;
                     }
                 }
@@ -9430,7 +9433,8 @@ static void Cmd_pickup(void)
                 if (!(Random() % 16))
                 {
                     heldItem = ITEM_BERRY_JUICE;
-                    SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &heldItem);
+                    if (AddBagItem(heldItem, 1) == FALSE)
+                        SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &heldItem);
                 }
             }
         }
